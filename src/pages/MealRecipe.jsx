@@ -1,21 +1,22 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom"
 
-function CategoryItem(props) {
+function MealRecipe(props) {
     const {
-        idCategory,
+        idMeal,
+        strMeal,
         strCategory,
-        strCategoryThumb,
-        strCategoryDescription
-    } = props
+        strMealThumb,
+        strInstructions
+    } = props.recipe[0]
     return <div className='card'>
         <div className="card-image">
-            <img src={strCategoryThumb} alt={strCategory} />
+            <img src={strMealThumb} alt={strMeal} />
         </div>
         <div className="card-content">
             <span className="card-title">
-                {strCategory}
+                {strMeal}
             </span>
-            <p>{strCategoryDescription.slice(0, 60)}...</p>
+            <p>{strInstructions.slice(0, 500)}...</p>
         </div>
         <div className="card-action">
             <Link to={`/category/${strCategory}`} className='btn'>Watch category</Link>
@@ -23,6 +24,4 @@ function CategoryItem(props) {
     </div>
 }
 
-export {
-    CategoryItem
-}
+export { MealRecipe }
