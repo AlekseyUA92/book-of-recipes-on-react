@@ -1,5 +1,7 @@
 import { CategoryItem } from './CategoryItem';
 
+
+
 function CategoryList({ catalog = [] }) {
     return (
         <div className='list'>

@@ -1,27 +1,61 @@
 import { Link } from "react-router-dom"
 
-function MealRecipe(props) {
+function MealRecipe({ recipe, goBack }) {
     const {
         idMeal,
         strMeal,
         strCategory,
+        strArea,
         strMealThumb,
-        strInstructions
-    } = props.recipe[0]
-    return <div className='card'>
-        <div className="card-image">
+        strInstructions,
+        strYoutube
+    } = recipe
+    return (
+        <div className='recipe'>
             <img src={strMealThumb} alt={strMeal} />
+            <h1 className="card-title">{strMeal}</h1>
+            <h6>Category: {strCategory}</h6>
+            {strArea ? <h6>{strArea}</h6> : null}
+            <p>{strInstructions}</p>
+
+            <table className="centered">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Measure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Object.keys(recipe).map((key) => {
+                        if (key.includes('Ingredient') && recipe[key]) {
+                            return (
+                                <tr key={key}>
+                                    <td>{recipe[key]}</td>
+                                    <td>{
+                                        recipe[
+                                        `strMeasure${key.slice(13)}`
+                                        ]
+                                    }</td>
+                                </tr>
+                            )
+                        }
+                        return null
+                    })
+
+                    }
+                </tbody>
+            </table>
+
+            {strYoutube ?
+                <div className="row">
+                    <h5 className='video-title'>Video Recipe</h5>
+                    <iframe title={idMeal} src={`https://www.youtube.com/embed/${strYoutube.slice(-11)}`} allowFullScreen />
+
+                </div>
+                : null}
+            <button onClick={goBack} className='btn'>Go Back</button>
         </div>
-        <div className="card-content">
-            <span className="card-title">
-                {strMeal}
-            </span>
-            <p>{strInstructions.slice(0, 500)}...</p>
-        </div>
-        <div className="card-action">
-            <Link to={`/category/${strCategory}`} className='btn'>Watch category</Link>
-        </div>
-    </div>
+    )
 }
 
 export { MealRecipe }

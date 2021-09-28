@@ -16,6 +16,10 @@ nav {
   padding: 1.5rem 0;
 }
 
+.footer-freepik a{
+  color: rgb(187, 255, 0);
+}
+
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -29,4 +33,17 @@ nav {
 
 .card-content { 
   flex-grow: 1;
+}
+
+.recipe img, iframe{
+    max-width: 100%;
+}
+
+.recipe iframe{
+    width: 600px;
+    height: 350px;
+}
+
+.recipe .video-title{
+    margin: 2rem 0 1.5rem;
 }
