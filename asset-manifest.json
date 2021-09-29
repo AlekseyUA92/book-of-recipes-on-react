@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/AlekseyUA92/book-of-recipes-on-react/static/css/main.a019b044.chunk.css",
+    "main.js": "/AlekseyUA92/book-of-recipes-on-react/static/js/main.bf3ae161.chunk.js",
+    "main.js.map": "/AlekseyUA92/book-of-recipes-on-react/static/js/main.bf3ae161.chunk.js.map",
+    "runtime-main.js": "/AlekseyUA92/book-of-recipes-on-react/static/js/runtime-main.cb7751c7.js",
+    "runtime-main.js.map": "/AlekseyUA92/book-of-recipes-on-react/static/js/runtime-main.cb7751c7.js.map",
+    "static/js/2.cec02461.chunk.js": "/AlekseyUA92/book-of-recipes-on-react/static/js/2.cec02461.chunk.js",
+    "static/js/2.cec02461.chunk.js.map": "/AlekseyUA92/book-of-recipes-on-react/static/js/2.cec02461.chunk.js.map",
+    "index.html": "/AlekseyUA92/book-of-recipes-on-react/index.html",
+    "static/css/main.a019b044.chunk.css.map": "/AlekseyUA92/book-of-recipes-on-react/static/css/main.a019b044.chunk.css.map",
+    "static/js/2.cec02461.chunk.js.LICENSE.txt": "/AlekseyUA92/book-of-recipes-on-react/static/js/2.cec02461.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb7751c7.js",
+    "static/js/2.cec02461.chunk.js",
+    "static/css/main.a019b044.chunk.css",
+    "static/js/main.bf3ae161.chunk.js"
+  ]
+}
