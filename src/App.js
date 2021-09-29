@@ -13,7 +13,7 @@ import { Recipe } from './components/Recipe';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename='/book-of-recipes-on-react'>
         <Header />
         <main className='container content'>
           <Switch>
