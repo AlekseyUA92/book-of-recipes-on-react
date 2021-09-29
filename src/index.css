@@ -47,3 +47,9 @@ nav {
 .recipe .video-title{
     margin: 2rem 0 1.5rem;
 }
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

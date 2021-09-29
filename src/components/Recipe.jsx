@@ -17,7 +17,6 @@ function Recipe() {
             .then((data) => setRecipe(data.meals[0]))
     }, [id])
 
-    console.log(recipe)
     return (<>
         {!recipe.idMeal ? <Preloader /> : <MealRecipe recipe={recipe} goBack={goBack} />}
     </>)
